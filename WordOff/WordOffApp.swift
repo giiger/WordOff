@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct WordOffApp: App {
+    @StateObject var dm = WordOffDataModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameView()
+                .environmentObject(dm)
         }
     }
 }
